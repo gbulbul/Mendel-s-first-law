@@ -4,7 +4,7 @@ m = 2
 n = 2
 def MultipLy(multiList, n):
     return [ele for ele in multiList for _ in range(n)]
-def domin_all(k,h,r):
+def domnnt_all(k,h,r):
     trials = 0
     dominants = 0
     full_comb=[]
@@ -20,4 +20,4 @@ def domin_all(k,h,r):
         trials=sum(4 for ele in pairs)
         result=4*sum(ele==('AA','aa') for ele in pairs)+4*sum(ele==('AA','Aa') for ele in pairs)+ 2*sum(ele== ('Aa','aa') for ele in pairs)+3*sum(ele==('Aa','Aa') for ele in pairs) + 4*sum(ele==('AA','AA') for ele in pairs)
         return pairs, result/trials,trials
-print(domin_all(k,m,n))
+print(domnnt_all(k,m,n))
